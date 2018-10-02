@@ -17,12 +17,12 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 import org.lwjgl.input.Keyboard;
 
-public class ChangeNarrator {
+public class RebindNarrator {
 	
 	private static KeyBinding keybind;
 	
 	@EventHandler
-	public static void init(FMLInitializationEvent event) {
+	public static void init() {
 		
 		keybind = new KeyBinding("options.narrator", new IKeyConflictContext() {
 			

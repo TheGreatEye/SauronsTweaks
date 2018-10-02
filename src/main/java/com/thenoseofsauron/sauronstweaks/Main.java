@@ -22,10 +22,14 @@ public class Main {
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event) {
 		
+		ReloadSound.preinit();
+		
 	}
 	
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
+		
+		RebindNarrator.init();
 		
 	}
 	

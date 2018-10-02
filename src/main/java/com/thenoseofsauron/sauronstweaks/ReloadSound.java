@@ -74,13 +74,13 @@ public class ReloadSound {
 	protected static KeyBinding soundBinding;
 	
 	@EventHandler
-	public void preinit(FMLPreInitializationEvent event) {
+	public static void preinit() {
 		
 		Logger.info("Registering Keybindings");
 		Logger.info("Minecraft version: '" + mcVersion + "'");
 		if(devEnv)
 			Logger.info("Running in Development (Deobfuscated) Environment");
-		soundBinding = new KeyBinding("Reload Default Sound", Keyboard.KEY_P, "key.categories.misc");
+		soundBinding = new KeyBinding("Reload Sound System", Keyboard.KEY_P, "key.categories.misc");
 		ClientRegistry.registerKeyBinding(soundBinding);
 		
 	}
