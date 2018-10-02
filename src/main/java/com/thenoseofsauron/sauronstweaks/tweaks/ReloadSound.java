@@ -1,4 +1,4 @@
-package com.thenoseofsauron.sauronstweaks;
+package com.thenoseofsauron.sauronstweaks.tweaks;
 
 import org.apache.logging.log4j.Logger;
 import java.lang.reflect.Field;

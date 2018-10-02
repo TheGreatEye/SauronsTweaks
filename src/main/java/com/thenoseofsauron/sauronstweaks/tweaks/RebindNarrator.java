@@ -1,4 +1,4 @@
-package com.thenoseofsauron.sauronstweaks;
+package com.thenoseofsauron.sauronstweaks.tweaks;
 
 import com.thenoseofsauron.sauronstweaks.util.Reference;
 import net.minecraft.client.Minecraft;

@@ -8,6 +8,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import com.thenoseofsauron.sauronstweaks.proxy.CommonProxy;
+import com.thenoseofsauron.sauronstweaks.tweaks.RebindNarrator;
+import com.thenoseofsauron.sauronstweaks.tweaks.ReloadSound;
 import com.thenoseofsauron.sauronstweaks.util.Reference;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
