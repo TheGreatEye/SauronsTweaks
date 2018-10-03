@@ -32,11 +32,11 @@ public class Zoom {
 	@SubscribeEvent
     public static void onEvent(FOVUpdateEvent event) {
 		
-        if (zoombind.isKeyDown()) {
+        if(zoombind.isKeyDown()) {
         	
-            event.setNewfov(0.5f);
-            Minecraft.getMinecraft().gameSettings.smoothCamera = true;
-            zoombindreleased = false;
+        	zoombindreleased = false;
+        	Minecraft.getMinecraft().gameSettings.smoothCamera = true;
+            event.setNewfov(0.2f);
             
         }
     	
@@ -45,9 +45,9 @@ public class Zoom {
 	@SubscribeEvent
 	public static void onClientTick(TickEvent.ClientTickEvent event) {
 		
-		if(zoombind.isPressed() == false) {
+		if(!zoombind.isKeyDown()) {
 
-			if(zoombindreleased == false) {
+			if(!zoombindreleased) {
 				
 				Minecraft.getMinecraft().gameSettings.smoothCamera = false;
 				zoombindreleased = true;
