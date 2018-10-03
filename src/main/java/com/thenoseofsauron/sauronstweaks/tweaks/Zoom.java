@@ -13,11 +13,14 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
 public class Zoom {
 	
 	private static KeyBinding zoombind;
+	
+	private static boolean zoombindreleased = false;
 	
 	public static void init() {
 		
@@ -33,9 +36,26 @@ public class Zoom {
         	
             event.setNewfov(0.5f);
             Minecraft.getMinecraft().gameSettings.smoothCamera = true;
+            zoombindreleased = false;
             
         }
     	
     }
+	
+	@SubscribeEvent
+	public static void onClientTick(TickEvent.ClientTickEvent event) {
+		
+		if(zoombind.isPressed() == false) {
+
+			if(zoombindreleased == false) {
+				
+				Minecraft.getMinecraft().gameSettings.smoothCamera = false;
+				zoombindreleased = true;
+				
+			}
+			
+		}
+		
+	}
 	
 }
