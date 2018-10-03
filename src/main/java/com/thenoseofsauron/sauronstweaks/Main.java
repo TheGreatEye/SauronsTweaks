@@ -25,7 +25,7 @@ public class Main {
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event) {
 		
-		ReloadSound.preinit();
+		
 		
 	}
 	
@@ -34,11 +34,14 @@ public class Main {
 		
 		RebindNarrator.init();
 		Zoom.init();
+		ReloadSound.init();
 		
 	}
 	
 	@EventHandler
 	public static void PostInit(FMLPostInitializationEvent event) {
+		
+		
 		
 	}
 	

@@ -36,7 +36,7 @@ public class Zoom {
         	
         	zoombindreleased = false;
         	Minecraft.getMinecraft().gameSettings.smoothCamera = true;
-            event.setNewfov(0.2f);
+            event.setNewfov(0.3f);
             
         }
     	
