@@ -24,7 +24,7 @@ public class Zoom {
 	
 	public static void init() {
 		
-		zoombind = new KeyBinding("Zoom Camera", Keyboard.KEY_C, "key.categories.misc");
+		zoombind = new KeyBinding("Zoom Camera", Keyboard.KEY_C, "key.categories.tweaks");
         ClientRegistry.registerKeyBinding(zoombind);
 		
 	}

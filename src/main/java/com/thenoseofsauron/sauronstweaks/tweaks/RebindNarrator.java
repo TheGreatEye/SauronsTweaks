@@ -42,7 +42,7 @@ public class RebindNarrator {
 				
 			}
 			
-		}, KeyModifier.CONTROL, Keyboard.KEY_B, "key.categories.misc");
+		}, KeyModifier.CONTROL, Keyboard.KEY_B, "key.categories.tweaks");
 		
 		ClientRegistry.registerKeyBinding(narbind);
 		

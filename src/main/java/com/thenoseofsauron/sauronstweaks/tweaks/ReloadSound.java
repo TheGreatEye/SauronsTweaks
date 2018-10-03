@@ -80,7 +80,7 @@ public class ReloadSound {
 		Logger.info("Minecraft version: '" + mcVersion + "'");
 		if(devEnv)
 			Logger.info("Running in Development (Deobfuscated) Environment");
-		soundbind = new KeyBinding("Reload Sound System", Keyboard.KEY_P, "key.categories.misc");
+		soundbind = new KeyBinding("Reload Sound System", Keyboard.KEY_P, "key.categories.tweaks");
 		ClientRegistry.registerKeyBinding(soundbind);
 		
 	}
