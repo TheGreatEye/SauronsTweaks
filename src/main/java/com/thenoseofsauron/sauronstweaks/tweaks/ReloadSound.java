@@ -71,7 +71,7 @@ public class ReloadSound {
 	protected static final boolean debug = System.getenv("DEBUG") != null && !System.getenv("DEBUG").isEmpty();
 	protected static final boolean devEnv = (Boolean) Launch.blackboard.get("fml.deobfuscatedEnvironment");
 	
-	protected static KeyBinding soundBinding;
+	protected static KeyBinding soundbind;
 	
 	@EventHandler
 	public static void preinit() {
@@ -80,8 +80,8 @@ public class ReloadSound {
 		Logger.info("Minecraft version: '" + mcVersion + "'");
 		if(devEnv)
 			Logger.info("Running in Development (Deobfuscated) Environment");
-		soundBinding = new KeyBinding("Reload Sound System", Keyboard.KEY_P, "key.categories.misc");
-		ClientRegistry.registerKeyBinding(soundBinding);
+		soundbind = new KeyBinding("Reload Sound System", Keyboard.KEY_P, "key.categories.misc");
+		ClientRegistry.registerKeyBinding(soundbind);
 		
 	}
 	
@@ -92,7 +92,7 @@ public class ReloadSound {
 		@SubscribeEvent
 	    public void onKeyInput(InputEvent.KeyInputEvent event) {
 			
-	        if(ReloadSound.soundBinding.isPressed()){
+	        if(ReloadSound.soundbind.isPressed()){
 	        	
 	        	ReloadSound.Logger.info("Reloading sound system...");
 	        	

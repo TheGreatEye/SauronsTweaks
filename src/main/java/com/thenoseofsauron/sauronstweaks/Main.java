@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import com.thenoseofsauron.sauronstweaks.proxy.CommonProxy;
 import com.thenoseofsauron.sauronstweaks.tweaks.RebindNarrator;
 import com.thenoseofsauron.sauronstweaks.tweaks.ReloadSound;
+import com.thenoseofsauron.sauronstweaks.tweaks.Zoom;
 import com.thenoseofsauron.sauronstweaks.util.Reference;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
@@ -32,6 +33,7 @@ public class Main {
 	public static void init(FMLInitializationEvent event) {
 		
 		RebindNarrator.init();
+		Zoom.init();
 		
 	}
 	
